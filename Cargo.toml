@@ -1,0 +1,15 @@
+[package]
+name = "rule_engine"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.58"
+serde = {version="1.0.137", features=["derive", "serde_derive"]}
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3
