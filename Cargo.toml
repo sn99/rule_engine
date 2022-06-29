@@ -13,3 +13,11 @@ serde = {version="1.0.137", features=["derive", "serde_derive"]}
 lto = true
 codegen-units = 1
 opt-level = 3
+
+[lib]
+bench = false
+
+[[bin]]
+bench = false
+name = "rule_engine"
+path = "src/main.rs"
